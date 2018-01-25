@@ -22,8 +22,11 @@ ul{
     width: fit-content;
 }
 
-.container a{
+a{
     text-decoration: none;
+}
+
+.container li a{
     color: black;
     width:50%;
     display: inline-block;
@@ -41,6 +44,7 @@ li{
     list-style-type: none;
     padding: 5px;
     border-bottom: 1px black solid;
+    cursor: pointer;
 }
 
 li:nth-child(even){

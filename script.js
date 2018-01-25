@@ -59,6 +59,8 @@ arr.forEach(function(element) {
 });
 
 
-
+function goToTwitch(){
+    window.location = 'http://www.google.com';
+}
 
 });
