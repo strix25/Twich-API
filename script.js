@@ -28,13 +28,15 @@ xhr.onload = function() {
     if (this.status === 200) {
         var data = JSON.parse(xhr.responseText);
         let statusEl = document.getElementById(`${el}`);
+        let parentEl = statusEl.parentNode;
         
         if(data.stream === null){
             console.log("stream is offline");
             statusEl.innerHTML = "offline";
+            parentEl.style.backgroundColor="lightcyan";
         }else{
-            statusEl.innerHTML = "ONLINE";
-            console.log("stream is offline");
+            statusEl.innerHTML = `ONLINE : ${data.stream.game}`;
+            parentEl.style.backgroundColor="greenyellow";
         }
 
         console.log(data);
